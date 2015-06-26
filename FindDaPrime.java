@@ -15,9 +15,11 @@ public class FindDaPrime {
 			
 			for(int i=low; i<high;i++){
 				boolean isPrime = true;
-				for(int j = 2; j<i; j++){
+				int max = (int)(Math.sqrt(i));
+				for(int j = 2; j<max; j++){
 					if((i % j) == 0){ 
-						isPrime = false; 
+						isPrime = false;
+						break;
 					}
 				}
 				if(isPrime){
